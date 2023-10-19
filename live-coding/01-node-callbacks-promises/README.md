@@ -2,7 +2,7 @@
 
 Escribe las soluciones en el archivo `solutions/index.js` manteniendo el nombre de las funciones y sus `export`. Usa `ESModules` en tu proyecto de Node.js
 
-1 - Arregla esta función para que el código posterior funcione como se espera:
+[x] 1 - Arregla esta función para que el código posterior funcione como se espera:
 
 ```javascript
 import net from 'node:net'
@@ -27,7 +27,7 @@ ping('midu.dev', (err, info) => {
 })
 ```
 
-2 - Transforma la siguiente función para que funcione con promesas en lugar de callbacks:
+[x] 2 - Transforma la siguiente función para que funcione con promesas en lugar de callbacks:
 
 ```javascript
 export function obtenerDatosPromise(callback) {
@@ -37,7 +37,11 @@ export function obtenerDatosPromise(callback) {
 }
 ```
 
-3 - Explica qué hace la funcion. Identifica y corrige los errores en el siguiente código. Si ves algo innecesario, elimínalo. Luego mejoralo para que siga funcionando con callback y luego haz lo que consideres para mejorar su legibilidad.
+3 -
+[x] Identifica y corrige los errores en el siguiente código.
+[x] Si ves algo innecesario, elimínalo.
+[x] Luego mejoralo para que siga funcionando con callback
+[x] y luego haz lo que consideres para mejorar su legibilidad.
 
 ```javascript
 export function procesarArchivo() {
@@ -65,7 +69,7 @@ export function procesarArchivo() {
 }
 ```
 
-4 - ¿Cómo mejorarías el siguiente código y por qué? Arregla los tests si es necesario:
+[x] 4 - ¿Cómo mejorarías el siguiente código y por qué? Arregla los tests si es necesario:
 
 ```javascript
 import fs from 'node:fs';
@@ -81,7 +85,7 @@ export function leerArchivos() {
 leerArchivos();
 ```
 
-5 - Escribe una funcion `delay` que retorne una promesa que se resuelva después de `n` milisegundos. Por ejemplo:
+[x] 5 - Escribe una funcion `delay` que retorne una promesa que se resuelva después de `n` milisegundos. Por ejemplo:
 
 ```javascript
 export async function delay () {
@@ -124,15 +128,19 @@ dotenv.config("./config/.env.local")
 
 Cosas a tener en cuenta:
 
-- Sólo se permite usar el módulo `fs` para leer el archivo.
-- Si el archivo no existe, no debe dar error, simplemente no hace nada.
-- Si el archivo existe, pero no tiene ninguna variable de entorno, no debe hacer nada.
-- Sólo debe soportar el archivo `.env` o el que se le pasa como parametro, no hace falta que soporte `.env.local`, `.env.development` y similares de forma automática.
-- Las variables de entorno siempre son strings, por lo que si en el archivo `.env` hay un número, por ejemplo `PORT=8080`, al leerlo con `fs` y añadirlo a `process.env` debe ser un string, no un número.
-- `process.env` es un objeto y, por lo tanto, es mutable. Esto significa que podemos añadir propiedades nuevas sin problemas.
+[x] - Sólo se permite usar el módulo `fs` para leer el archivo.
+[x] - Si el archivo no existe, no debe dar error, simplemente no hace nada.
+[x] - Si el archivo existe, pero no tiene ninguna variable de entorno, no debe hacer nada.
+[x] - Sólo debe soportar el archivo `.env` o el que se le pasa como parametro, no hace falta que soporte `.env.local`, `.env.development` y similares de forma automática.
+[x] - Las variables de entorno siempre son strings, por lo que si en el archivo `.env` hay un número, por ejemplo `PORT=8080`, al leerlo con `fs` y añadirlo a `process.env` debe ser un string, no un número.
+[x] - `process.env` es un objeto y, por lo tanto, es mutable. Esto significa que podemos añadir propiedades nuevas sin problemas.
 
-
-7 - Diseña una API REST utilizando Express que permite a los usuarios crear, leer, modificar, actualizar y eliminar elementos de una lista.
+7 - Diseña una API REST utilizando Express que permite a los usuarios
+[ ] crear,
+[ ] leer,
+[ ] modificar,
+[ ] actualizar y
+[ ] eliminar elementos de una lista.
 
 La lista tendrá objetos que tienen la siguiente forma:
 

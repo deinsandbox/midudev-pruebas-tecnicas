@@ -31,6 +31,24 @@ describe('1. dotenv', () => {
     equal(process.env.TOKEN, '123abc')
   })
 
+  it('1.1.1 load .env file with equal inside', () => {
+    // create .env file in root directory
+    writeFileSync('.env', 'PORT=3000\nTOKEN="123=abc"')
+    config()
+
+    equal(process.env.PORT, '3000')
+    equal(process.env.TOKEN, '123=abc')
+  })
+
+  it('1.1.2 load .env file with double quotes inside', () => {
+    // create .env file in root directory
+    writeFileSync('.env', 'PORT=3000\nTOKEN="123\"abc"')
+    config()
+
+    equal(process.env.PORT, '3000')
+    equal(process.env.TOKEN, '123"abc')
+  })
+
   it('1.2. load .env file from custom path', () => {
     // create .env file in root directory
     writeFileSync('./test/.env.local', 'PORT=3000\nTOKEN="123abc"')
@@ -40,7 +58,7 @@ describe('1. dotenv', () => {
     equal(process.env.TOKEN, '123abc')
   })
 
-  it('1.3 it works even without .env file', () => {
+  it('1.3 it works even without .env file',  () => {
     config()
     equal(process.env.TOKEN, undefined)
   })
